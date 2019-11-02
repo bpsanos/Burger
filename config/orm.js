@@ -32,7 +32,8 @@ var orm = {
       }
       cb(res);
     });
-  }
+  },
+
   insertOne: function(table, cols, vals, cb) {
     var dbQuery =
       "INSERT INTO " +
@@ -51,7 +52,8 @@ var orm = {
       }
       cb(res);
     });
-  }
+  },
+
   updateOne: function(table, objColVals, condition, cb) {
     var dbQuery =
       "UPDATE " +
@@ -70,6 +72,7 @@ var orm = {
       cb(res);
     });
   },
+
   deleteOne: function(table, condition, cb) {
     var dbQuery = "DELETE FROM " + table + " WHERE " + condition;
     console.log(dbQuery);
@@ -82,4 +85,5 @@ var orm = {
     });
   }
 };
+
 module.exports = orm;
